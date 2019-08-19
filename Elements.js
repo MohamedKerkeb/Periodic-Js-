@@ -1,4 +1,4 @@
-const data = [
+export default (data = [
   {
     name: "Hydrogen",
     appearance: "colorless gas",
@@ -2841,6 +2841,4 @@ const data = [
     ypos: 7,
     shells: [8, 18, 32, 32, 18, 8]
   }
-];
-
-export default data;
+]);

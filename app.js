@@ -11,6 +11,7 @@ const affiche = document.querySelector(".affiche");
 const plus = document.createElement("div");
 
 const roule = data => {
+  console.log(data);
   for (let element of data) {
     const div = document.createElement("div");
     div.classList.add("element");
@@ -33,7 +34,7 @@ const roule = data => {
     // }
 
     if (element.atomicNumber == 58) {
-      console.log(element.atomicMass);
+      // console.log(element.atomicMass);
     }
 
     // if (element.atomicNumber >= 90 && element.atomicNumber <= 103) {
@@ -84,8 +85,43 @@ const roule = data => {
     div.addEventListener("mouseenter", () => {
       affiche.innerHTML = `
         <div class="mo">
-          <h1>${element.name}</h1>
+          <div>
+            <h1>${element.name}</h1>
+            <div class="symbol">
+              ${element.symbol}
+            </div>
+          </div>
+          <div>
+          <ul>
+            <li>atomic mass: ${element.atomicMass}</li>
+            <li>atomic number: ${element.atomicNumber}</li>
+            <li>atomic radius: ${element.atomicRadius}</li>
+            <li>boiling point: ${element.boilingPoint}</li>
+            <li>bonding type: ${element.bondingType}</li>
+            <li>density : ${element.density}</li>
+            <li>electron affinity : ${element.electronAffinity}</li>
+          </ul>
+          </div>
+          <div>
 
+            <li>electron negativity : ${
+              element.electronegativity ? element.electronegativity : ""
+            }</li>
+
+          <ul>
+            <li>electronic configuration: ${
+              element.electronicConfiguration
+            }</li>
+            <li>bgroup Block: ${element.groupBlock}</li>
+            <li>ion radius: ${element.ionRadius ? element.ionRadius : ""}</li>
+            <li>ionization energy : ${element.ionizationEnergy}</li>
+            <li>melting point : ${element.meltingPoint}</li>
+            <li>oxidation States : ${element.oxidationStates}</li>
+            <li>standard State: ${element.standardState}</li>
+            <li>vanDel waals radius: ${element.vanDelWaalsRadius}</li>
+            <li>year discovered:  ${element.yearDiscovered}</li>
+          </ul>
+          </div>
         </div>
       `;
     });
