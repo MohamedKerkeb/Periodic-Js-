@@ -33,8 +33,13 @@ const roule = data => {
     //   div.classList.add("quatre");
     // }
 
-    if (element.atomicNumber == 58) {
-      // console.log(element.atomicMass);
+    if (element.atomicNumber >= 57 && element.atomicNumber <= 71) {
+      console.log(element.atomicMass);
+      div.classList.add("quatre");
+    }
+
+    if (element.atomicNumber >= 89 && element.atomicNumber <= 102) {
+      div.classList.add("cinq");
     }
 
     // if (element.atomicNumber >= 90 && element.atomicNumber <= 103) {
@@ -82,7 +87,7 @@ const roule = data => {
     //   affiche.innerHTML = name;
     // });
 
-    div.addEventListener("mouseenter", () => {
+    div.addEventListener("click", () => {
       affiche.innerHTML = `
         <div class="mo">
           <div>
